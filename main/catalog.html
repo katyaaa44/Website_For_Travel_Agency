@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Explore more</title>
+        <link rel="stylesheet" href="../styles/styles.css" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>    
+        <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    </head>
+    <body >
+      <header>
+        <nav  class="navbar fixed-top bg-dark border-bottom border-body mb-0 px-4 justify-content-between" data-bs-theme="dark">
+          <a class="navbar-brand" href="#"><img src="../img/logo/logoWhite.png" alt="Logo" class="d-inline-block align-text-top logo"></a>
+        
+          <ul class="nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle"  role="button" >Home</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" type="button" href="home.html#welcome">Welcome</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" type="button" href="home.html#what-we-do">What we do?</a></li>
+                <li><a class="dropdown-item" type="button" href="home.html#start">Let’s start!</a></li>
+                <li><a class="dropdown-item" type="button" href="home.html#choose-us">Why choose us?</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <div class="current">
+              <a class="nav-link dropdown-toggle"  role="button" >About tours & FAQ</a>
+              </div>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="catalog.html#catalog">Catalog</a></li>
+                <li><a class="dropdown-item" href="catalog.html#compare-packages">Compare packages</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="catalog.html#FQA">FAQ</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" role="button" style="color: rgb(188, 188, 188);">Contacts</a>
+                <ul class="dropdown-menu ">
+                <li><a class="dropdown-item" href="contacts.html">Information</a></li>
+                <li><a class="dropdown-item" href="contacts.html#open-hours">Open hours</a></li>
+                <li><a class="dropdown-item" href="contacts.html#location">Location</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="contacts.html#follow-us">Follow us</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="contacts.html#write-to-us">Write to us</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>          
+      </header>
+
+  <!-- Placeholder for allerts -->  
+      <div class="alert-container" id="liveAlertPlaceholder2"></div>
+      
+  <!-- Catalog -->
+      <div class="container " style="padding: 5% 6% 2% 6%;"  id="#catalog" >
+        <div class="row pb-5 pt-5 justify-content-center info">
+          <h4 style="padding: 0; margin: 0; text-align: center;">Here you can choose a tour.</h4>
+        </div>
+
+  <!-- Container with tour-cards (photo + btns : Learn more, Reserve now, Comments) -->
+        <div class="row justify-content-start">
+          <!-- Tour1 -->
+          <div class="col-md-6 col-xl-4 pb-5 d-flex justify-content-center align-items-center">
+            <div class="card " style="width: 17rem; ">
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">NEW!</span>
+                <img src="../img/countries/dubai.jpg" class="card-img-top img-fluid" alt="..." style="height: 300px; ">
+                <div class="card-body">
+                  <h6 class="card-title">Dubai, UAE</h5>
+                  <p class="card-text">Where luxury meets the desert for a once-in-a-lifetime adventure.</p>
+                  <a href="#" id="learn_more_option1" class="btn btn-sm btn-outline-dark "  data-bs-toggle="modal" data-bs-target="#tour_description_form">Learn more</a>
+                  <a href="#" style="margin-left: 0.4vw !important; " id="reserve_option1" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#reservation_form">Reserve now</a>
+                  <i class="bi bi-sm bi-chat-dots fs-4 openComments"  data-tour-id="dubai" data-tour="Dubai" data-bs-toggle="modal" data-bs-target="#commentModal" role="button" style="margin-left: 7px !important;"></i>
+                </div>
+            </div>
+          </div>
+          <!-- Tour2   -->
+          <div class="col-md-6 col-xl-4 pb-5 d-flex justify-content-center align-items-center">
+            <div class="card" style="width: 17rem; ">
+              <img src="../img/countries/paris.jpg" class="card-img-top" alt="..." style="height: 300px;">
+              <div class="card-body">
+                <h6 class="card-title">Paris, France</h5>
+                <p class="card-text">Discover the City of Love, where every corner tells a story.</p>
+                <a href="#" id="learn_more_option2" class="btn btn-sm btn-outline-dark "  data-bs-toggle="modal" data-bs-target="#tour_description_form">Learn more</a>
+                <a href="#" style="margin-left: 5px !important;" id="reserve_option2" tour-id="paris" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#reservation_form">Reserve now</a>
+                <i class="bi bi-chat-dots fs-4 openComments" data-tour-id="paris" data-tour="Paris" data-bs-toggle="modal" data-bs-target="#commentModal" role="button" style="margin-left: 7px !important;"></i>
+              </div>
+            </div>
+          </div>
+          <!-- Tour3 -->
+          <div class="col-md-6 col-xl-4 pb-5 d-flex justify-content-center align-items-center">
+            <div class="card" style="width: 17rem;">
+              <img src="../img/countries/rim.jpg" class="card-img-top" alt="..." style="height: 300px;">
+              <div class="card-body">
+                <h6 class="card-title">Rome, Italy</h5>
+                <p class="card-text">Step into the Eternal City and walk through centuries of history.</p>
+                <a href="#" id="learn_more_option3" class="btn btn-sm btn-outline-dark "  data-bs-toggle="modal" data-bs-target="#tour_description_form">Learn more</a>
+                <a href="#" style="margin-left: 5px !important;" id="reserve_option3" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#reservation_form">Reserve now</a>
+                <i class="bi bi-chat-dots fs-4 py-2 openComments" data-tour-id="rome" data-tour="Rome" data-bs-toggle="modal" data-bs-target="#commentModal" role="button" style="margin-left: 7px !important;"></i>
+              </div>
+            </div>
+          </div>
+          <!-- Tour4 -->
+          <div class="col-md-6 col-xl-4 pb-5 d-flex justify-content-center align-items-center">
+            <div class="card" style="width: 17rem;">
+              <img src="../img/countries/Cairo.jpg" class="card-img-top" alt="..." style="height: 300px;">
+              <div class="card-body">
+                <h6 class="card-title">Cairo, Egypt</h5>
+                <p class="card-text">Uncover the secrets of the pharaohs and the Nile.</p>
+                <a href="#" id="learn_more_option4" class="btn btn-sm btn-outline-dark "  data-bs-toggle="modal" data-bs-target="#tour_description_form">Learn more</a>
+                <a href="#" style="margin-left: 5px !important;" id="reserve_option4" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#reservation_form">Reserve now</a>
+                <i class="bi bi-chat-dots fs-4 py-2 openComments" data-tour-id="cairo" data-tour="Cairo" data-bs-toggle="modal" data-bs-target="#commentModal" role="button" style="margin-left: 7px !important;"></i>
+              </div>
+            </div>
+          </div>
+          <!-- Tour5 -->
+          <div class="col-md-6 col-xl-4 pb-5 d-flex justify-content-center align-items-center">
+            <div class="card" style="width: 17rem;">
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">NEW!</span>
+                <img src="../img/countries/ny.jpg" class="card-img-top" alt="..." style="height: 300px ">
+                <div class="card-body">
+                  <h6 class="card-title">New York City, USA</h5>
+                  <p class="card-text">Feel the pulse of the city that never sleeps.</p>
+                  <a href="#" id="learn_more_option5" class="btn btn-sm btn-outline-dark "  data-bs-toggle="modal" data-bs-target="#tour_description_form">Learn more</a>
+                  <a href="#" style="margin-left: 5px !important;" id="reserve_option5" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#reservation_form">Reserve now</a>
+                  <i class="bi bi-chat-dots fs-4 py-2 openComments" data-tour-id="usa" data-tour="Usa" data-bs-toggle="modal" data-bs-target="#commentModal" role="button" style="margin-left: 7px !important;"></i>
+                </div>
+              </div>
+          </div>
+          <!-- Tour6 -->
+          <div class="col-md-6 col-xl-4 pb-5 d-flex justify-content-center align-items-center">
+            <div class="card" style="width: 17rem;">
+              <img src="../img/countries/tokyo.jpg" class="card-img-top" alt="..." style="height: 300px; ">
+              <div class="card-body">
+                <h6 class="card-title">Tokyo, Japan</h5>
+                <p class="card-text">Experience the perfect blend of tradition and innovation.</p>
+                <a href="#" id="learn_more_option6" class="btn btn-sm btn-outline-dark "  data-bs-toggle="modal" data-bs-target="#tour_description_form">Learn more</a>
+                <a href="#" style="margin-left: 5px !important;" id="reserve_option6" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#reservation_form">Reserve now</a>
+                <i class="bi bi-chat-dots fs-4 py-2 openComments" data-tour-id="tokyo" data-tour="Tokyo" data-bs-toggle="modal" data-bs-target="#commentModal" role="button" style="margin-left: 7px !important;"></i>
+              </div>
+            </div>
+          </div>     
+        </div>
+
+  <!-- Table for quick compare tours -->
+
+        <div class="row px-5 py-5 justify-content-center" id="compare-packages">
+          <h4 class="text-center mb-4">Compare Tour Packages</h4>
+          <table class="table table-bordered" style="width: 90% !important; font-size: small !important; border-color: black; border-width: 130px;">
+            <thead class="table-dark text-center">
+              <tr>
+                <th>Tour</th>
+                <th>Price (per person)</th>
+                <th>Duration</th>
+                <th>Highlights</th>
+              </tr>
+            </thead>
+            <tbody class="text-center">
+              <tr>
+                <td style="font-weight: bold;">Dubai, UAE</td>
+                <td >$1,800</td>
+                <td>5 Days</td>
+                <td class="text-start">
+                  - 5-star hotel stay<br>
+                  - Desert safari with BBQ dinner<br>
+                  - City tour (Burj Khalifa, Dubai Marina)<br>
+                  - Evening dhow cruise
+                </td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;">Paris, France</td>
+                <td >$2,200</td>
+                <td>6 Days</td>
+                <td class="text-start">
+                  - 4-star hotel stay<br>
+                  - Eiffel Tower visit<br>
+                  - Seine River cruise<br>
+                  - Guided city tour
+                </td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;">Rome, Italy</td>
+                <td>$2,000</td>
+                <td>5 Days</td>
+                <td class="text-start">
+                  - 4-star hotel stay<br>
+                  - Guided tour of the Colosseum<br>
+                  - Vatican City visit<br>
+                  - Authentic Italian cuisine tasting
+                </td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;">Cairo, Egypt</td>
+                <td>$1,500</td>
+                <td>4 Days</td>
+                <td class="text-start">
+                  - 4-star hotel stay<br>
+                  - Guided tour of the Pyramids<br>
+                  - Nile River dinner cruise<br>
+                  - Egyptian Museum visit
+                </td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;">New York City, USA</td>
+                <td>$2,500</td>
+                <td>5 Days</td>
+                <td class="text-start">
+                  - 5-star hotel stay<br>
+                  - Central Park and Times Square<br>
+                  - Broadway show ticket<br>
+                  - Statue of Liberty tour
+                </td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;">Tokyo, Japan</td>
+                <td>$2,800</td>
+                <td>7 Days</td>
+                <td class="text-start">
+                  - 4-star hotel stay<br>
+                  - Mount Fuji day trip<br>
+                  - Tokyo Tower visit<br>
+                  - Sushi-making experience
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+
+  <!-- Frequently Asked Questions -->
+
+        <div class="row-md-2 justify-content-center px-5 py-5" id="FQA">
+          <h4 class="text-center pb-4">Frequently Asked Questions</h4>
+          <div class="accordion mx-auto" id="faqAccordion" style="width: 95%; font-size: small;">
+
+            <!-- Q1 -->
+            <div class="accordion-item justify-content-center">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  What is included in the tour packages?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Most tour packages include accommodations, guided tours, transportation, and some meals. Optional activities can be added for an additional fee.
+                </div>
+              </div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Can I customize my tour package?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes, all our tours are customizable. You can add or remove activities, extend your stay, or even combine multiple destinations in one trip.
+                </div>
+              </div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Are the catalog fixed or do they vary?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  catalog may vary depending on the season, hotel preferences, and optional add-ons. Our team will provide a detailed breakdown before booking.
+                </div>
+              </div>
+            </div>
+
+            <!-- Q4 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  What is the cancellation policy?
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Cancellation policies depend on the tour and time of cancellation. Full refunds are typically available up to 30 days before the departure date. Contact us for details.
+                </div>
+              </div>
+            </div>
+
+            <!-- Q5 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  Do you offer group discounts?
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes, we offer discounts for groups of 5 or more. The larger the group, the higher the discount.
+                </div>
+              </div>
+            </div>
+            
+            <!-- Q6 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  How can I book a tour?
+                </button>
+              </h2>
+              <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  You can book a tour directly through our website, contact us by phone, or visit our office. Online bookings are quick and secure.
+                </div>
+              </div>
+            </div>
+        
+            <!-- Q7 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSeven">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                  Are flights included in the packages?
+                </button>
+              </h2>
+              <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Flights are not included in most packages but can be arranged upon request. We work with trusted airlines to offer competitive rates.
+                </div>
+              </div>
+            </div>
+        
+            <!-- Q8 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingEight">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                  What should I pack for the trip?
+                </button>
+              </h2>
+              <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Packing recommendations depend on the destination and season. Our team provides a detailed packing list with your booking confirmation.
+                </div>
+              </div>
+            </div>
+        
+            <!-- Q9 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingNine">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                  Is travel insurance included?
+                </button>
+              </h2>
+              <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Travel insurance is not included but can be arranged at an additional cost. We highly recommend it for your safety and peace of mind.
+                </div>
+              </div>
+            </div>
+        
+            <!-- Q10 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                  What payment methods do you accept?
+                </button>
+              </h2>
+              <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  We accept all major credit cards, bank transfers, and PayPal. Payment plans are also available for select packages.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+
+   <!-- Modal window with writing/reading comments. Exept the text user can also upload a photo. -->
+   <!-- Uses "supabase" database for storing comments  . -->
+
+      <div class="modal fade" id="commentModal" tabindex="-1" aria-labelledby="commentModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="commentModalLabel">Comments</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div id="commentsSection" class="mb-3">
+                <h6>Existing Comments:</h6>
+                <input type="hidden" id="hiddenTourId" value="" />
+                <ul id="commentList" class="list-unstyled">
+                </ul>
+              </div>
+            </div>
+              <div class="modal-footer">
+              <form id="commentForm">
+                <div class="input-group input-group-sm mb-3">
+                  <div class="row">
+                    <div class="col-6 mb-3">
+                      <label for="firstName" class="form-label">Enter your name:</label>
+                      <input type="text" id="firstName" class="form-control" required>
+                    </div>
+                    <div class=" col-6 mb-3">
+                      <label for="photoUpload" class="form-label">Upload a photo (optional):</label>
+                      <input type="file" id="photoUpload" class="form-control form-control-sm" accept="image/*">
+                    </div>
+                  </div>
+                  <div class=" col-12 mb-2">
+                    <label for="commentInput" class="form-label">Add a comment:</label>
+                    <textarea id="commentInput" class="form-control" rows="2" required></textarea>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Post Comment</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+      <!-- Reservation form for each tour individualy.  
+           User should fill: Name, Surname, email, individual/roup tour, select a date. 
+           Uses "emailjs"  for sending mails(new order details) to the company's e-mail -->
+
+      <div class="modal fade" id="reservation_form" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="tour_description_formLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+      
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="tour_description_formLabel">Reservation Form</h1>
+              <button type="button" id="close" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+      
+            <div class="modal-body">
+              <form id="contact-form" class="row g-3 needs-validation" novalidate>
+                <!-- Select a tour -->
+                <div class="col-md-12">
+                  <label for="tour_name" class="form-label">Choose a tour</label>
+                  <select id="tour_name" class="form-select" required>
+                    <option value="" disabled selected>Choose...</option>
+                    <option value="Dubai">Dubai, UAE</option>
+                    <option value="Paris">Paris, France</option>
+                    <option value="Rome">Rome, Italy</option>
+                    <option value="Cairo">Cairo, Egypt</option>
+                    <option value="NYC">New York City, USA</option>
+                    <option value="Tokyo">Tokyo, Japan</option>
+                  </select>
+                  <div class="invalid-feedback">Please select a tour.</div>
+                </div>
+      
+                <!-- Name -->
+                <div class="col-md-6">
+                  <label for="First name" class="form-label">First name</label>
+                  <input type="text" class="form-control" id="First_name" minlength="3" required>
+                  <div class="invalid-feedback">Name should contain at least 3 characters.</div>
+                </div>
+      
+                <!-- Surname -->
+                <div class="col-md-6">
+                  <label for="Last name" class="form-label">Last name</label>
+                  <input type="text" class="form-control" id="Last_name" minlength="3" required>
+                  <div class="invalid-feedback">Last name should contain at least 3 characters.</div>
+                </div>
+      
+                <!-- Email -->
+                <div class="col-md-12">
+                  <label for="email" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="email" required>
+                  <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+
+                <!-- Type of tour -->
+                <div class="col-md-6 type-of-tour">
+                  <p class="form-label">Type of Tour</p>
+                  <div class="form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioreserve_Options" id="Individual" value="Individual" required>
+                    <label class="form-check-label" for="Individual">Individual</label>
+                  </div>
+                  <div class="form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioreserve_Options" id="Group" value="Group" required>
+                    <label class="form-check-label" for="Group">Group</label>
+                  </div>
+                  <div class="invalid-feedback">Please select a tour type.</div>
+                </div>
+
+                <!-- Num of peole -->
+                <div class="col-md-6" id="groupOptions" style="display: none; margin-top: 10px;">
+                  <label for="groupSize" class="form-label">Number of people:</label>
+                  <input type="range" id="groupSize" class="form-range" min="2" max="10" step="1" value="2">
+                  <div id="groupSizeValue">2 People</div>
+                </div>
+      
+                <!-- Date -->
+                <div class="col-md-6">
+                  <label for="tourDate" class="form-label">Select a date</label>
+                  <input type="date" id="tourDate" class="form-control" min="2024-11-15" max="2024-12-31" required>
+                  <div class="invalid-feedback">Please select a valid date.</div>
+                </div>
+      
+                <!-- Submit -->
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit" >Submit form</button>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+        
+      <div class="alert-container" id="liveAlertPlaceholder2"></div>
+
+      <div class="modal fade" id="tour_description_form"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="tour_description_formLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <div class="modal-header pb-0 mb-0">
+              <h1 class="modal-title fs-5 pb-3 " id="tour_description_formLabel">Tour description</h1>
+              <button type="" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> 
+            </div>
+
+            <div class="modal-body">
+              <div id="tour_description" class="container mt-0 tour_description"></div>
+            </div>
+
+          <div class="modal-footer text-start tour_description" id="footer_description"></div>
+          </div>
+        </div>
+      </div>
+
+    <footer>
+      <div class="container pt-5 pb-5 ">
+        <div class="row justufy-content-start">
+          <div class="col-2 px-4 " >
+            <div class="row title"><a  href="home.html" >Home</a></div>
+            <div class="row pt-1"><a  href="home.html#welcome" >Welcome</a></div>
+            <div class="row pt-1"><a  href="home.html#what-we-do">What we do?</a></div>
+            <div class="row pt-1"><a  href="home.html#start">Let’s start!</a></div>
+            <div class="row pt-1"><a  href="home.html#choose-us" >Why choose us?</a></div>
+
+          </div>
+
+          <div class="col-2">
+            <div class="row title"><a class="footer" href="catalog.html" >About tours & FAQ</a></div>
+            <div class="row pt-1" ><a href="catalog.html#catalog">Catalog</a></div>
+            <div class="row pt-1" ><a href="catalog.html#compare-packages">Compare packages</a></div>
+            <div class="row pt-1" ><a  href="catalog.html#FQA">FAQ</a></div>
+          </div>
+
+          <div class="col-2">
+            <div class="row title"><a href="contacts.html">Contacts</a> </div>
+            <div class="row pt-1" ><a href="contacts.html">Information</a></div>
+            <div class="row pt-1" ><a href="contacts.html#open-hours">Open hours</a></div>
+            <div class="row pt-1" ><a  href="contacts.html#location">Location</a></div>
+            <div class="row pt-1" ><a  href="contacts.html#follow-us">Follow us</a></div>
+            <div class="row pt-1" ><a href="contacts.html#write-to-us">Write to us</a></div>
+          </div>
+
+          <div class="col-2 ">
+            <div class="row title"style="color: #da6981;"> <a href="">Social media</a></div>
+            <div class="row pt-1"><a class="footer" href="https://www.instagram.com/" >Instagram</a></div>
+            <div class="row pt-1"><a class="footer" href="https://www.facebook.com/" >Facebook</a></div>
+            <div class="row pt-1"><a class="footer" href="https://x.com/i/flow/login" >Twitter</a></div>
+          </div>
+          
+          <div class="col-2 align-self-center text-end px-5">
+            <img class="img footer-logo" src="../img/logo/logoWhite.png" alt="logo" >
+          </div>
+        </div>
+      </div>
+
+    </footer>
+
+    <!-- Service for sending e-mails (new orders) -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- Сalendar so that only certain dates can be selected -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Database for storing comments -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <!-- Local files -->
+    <script src="../js/allert.js"></script>
+    <script src="../js/learnMoreForm.js"></script>
+    <script src="../js/commentsForm.js"></script>
+    <script src="../js/reservationForm.js"></script>
+  </body>
+</html>
