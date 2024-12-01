@@ -2,7 +2,6 @@
 
 *This is the website of the company "Explore More"  consisting of 3 pages: Home, About tours & FAQ, Contacts. On the website the user will learn a detailed description of the tours, find the price for each of them, also can book this tour through the form, write a comment if he was impressed/disappointed with the tour, find answers to frequently asked questions and can also contact the company through the form or by phone/e-mail.*
 
----
 
 ## Pages
 
