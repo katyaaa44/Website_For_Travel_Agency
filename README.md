@@ -42,7 +42,7 @@ On the Contacts page, the user will find the phone number, e-mail adress, physic
 <img src="./img_for_readme/contactUsForm.png" alt="Описание" width="350" height="150" onclick="window.open('./img_for_readme/contactUsForm.png')">
 
 
----
+
 
 ## Install
 
