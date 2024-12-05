@@ -8,7 +8,7 @@
 
 
 body{
-  background-color: #e4e4e4c1 !important; 
+  background-color: #f0f0f0c1 !important; 
   overflow-x: hidden;
   overflow-y: scroll;
   font-family:  'Source Sans Pro', sans-serif !important; 
@@ -53,8 +53,8 @@ body::-webkit-scrollbar {
 
 
 .footer-logo{
-  width: calc(var(--index) * 13); 
-  height: calc(var(--index) * 4);
+  width: 30% !important; 
+  height: 10% !important;
 }
 
 .accordion-button{
@@ -120,19 +120,24 @@ h4{
 
 
 footer a{
-  color: #fbfbfb96;
+  color: #fbfbfb96 !important;
   text-decoration: none; 
+  font-size: smaller !important;
 }
 footer {
   background-color: rgb(34, 37, 41);
-  font-size: calc(var(--index) * 0.7);
+  font-size: smaller !important;
   
+}
+
+.col-6 .footer{
+  margin-top: 10px !important;
 }
 
 
 .title a{
   color: #da6981 !important;
-  font-size: calc(var(--index)) !important;
+  font-size:medium !important;
 }
 
 .nav-item a{
