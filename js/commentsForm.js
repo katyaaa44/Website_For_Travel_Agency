@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Sve comments to database
+  // Save comments to database
   async function saveReview(tourId, name, text, photoUrl) {
     const { data, error } = await supabase1
       .from('comments')
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!firstName || !commentText) {
       const alertPlaceholder = document.getElementById('liveAlertPlaceholder2');
-      showAlert('Fill all fields please.',  'daner', 3000, alertPlaceholder) ;
+      showAlert('Fill all fields please.',  'danger', 3000, alertPlaceholder) ;
       return;
     }
 
